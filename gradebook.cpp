@@ -70,3 +70,30 @@ void Gradebook::enter_grade(string first_name, string last_name, string assignme
     }
 
 }
+
+void Gradebook::report()
+{
+    cout << "Student Grades: " << endl;
+    for (int i = 0; i < student_list.size(); i++)
+    {
+        cout << "- " << student_list[i].get_last_name() << ", " << student_list[i].get_first_name() << ", " << student_list[i].get_id() << endl;
+        for (int j = 0; j < assignment_list.size(); j++)
+        {
+            cout << "   - " << assignment_list[j].get_name() << ", ";
+            bool grade_found = false;
+            for (int k = 0; k < grade_list.size(); k++)
+            {
+                if(grade_list[k].get_first_name() == student_list[i].get_first_name() && grade_list[k].get_last_name() == student_list[i].get_last_name() && grade_list[k].get_assignment_name() == assignment_list[j].get_name())
+                {
+                    cout << grade_list[k].get_score() << "/" << assignment_list[j].get_max_grade() << endl;
+                    grade_found = true;
+                }
+            }
+            if (!grade_found)
+            {
+                cout << "none" << endl;
+            }
+        }
+        cout << endl;
+    }
+}

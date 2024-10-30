@@ -19,5 +19,7 @@ int main()
     gradebook.enter_grade("Minnie", "Mouse", "Exam 1", 110);
     gradebook.enter_grade("Nathaniel", "Mark", "Exam 1", 10);
 
+    gradebook.report();
+
     return 0;
 }

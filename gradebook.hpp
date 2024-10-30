@@ -18,6 +18,6 @@ class Gradebook
         Gradebook();
         void add_student(string first_name, string last_name, string id);
         void add_assignment(string name, int max_grade);
-        void enter_grade(string first_name, string last_name, string assingment_name, int score);
+        void enter_grade(string first_name, string last_name, string assignment_name, int score);
         void report();
 };

@@ -19,3 +19,8 @@ string Student::get_last_name()
 {
     return this->last_name;
 }
+
+string Student::get_id()
+{
+    return this->student_id;
+}
